@@ -10,8 +10,8 @@ COPY . /app
 # Install a simple HTTP server (e.g., Python's HTTP server)
 RUN apt-get update && apt-get install -y python3
 RUN apt-get clean
-EXPOSE 8000
+EXPOSE 80
 
 # Set the command to run the HTTP server
-CMD ["python3", "-m", "http.server", "8000"]
+CMD ["python3", "-m", "http.server", "80"]
 
